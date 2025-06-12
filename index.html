@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> ® Web Developer </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      background: black;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .intro {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #00bfff;
+      text-shadow: 0 0 15px #0099ff;
+    }
+
+    .ritik-name {
+      font-size: 2em;
+      color: #1e90ff;
+      font-weight: bold;
+      text-shadow: 0 0 10px #4682b4;
+      margin-top: 10px;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 1em;
+      line-height: 1.5;
+      color: #add8e6;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatUp 8s linear infinite;
+      opacity: 0.7;
+      pointer-events: none; /* ✅ Important line to allow button clicks */
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: -10px; top: 0; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(1) rotate(45deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.5) rotate(45deg); opacity: 0; }
+    }
+
+    .learning-section {
+      padding: 30px 20px;
+      background: #111;
+      text-align: center;
+      line-height: 1.8;
+      z-index: 2;
+      position: relative;
+    }
+
+    .learning-section h2 {
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffff;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .learning-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .learning-section li {
+      margin: 10px 0;
+      font-size: 1.1em;
+      color: #dcdcdc;
+    }
+
+    .learning-section li::before {
+      content: "👉 ";
+      color: #00ff99;
+    }
+
+    .motivation {
+      margin-top: 25px;
+      font-size: 1.2em;
+      color: #ff69b4;
+      text-shadow: 0 0 8px #ff1493;
+    }
+
+    .motivation a {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="heartArea"></div>
+
+  <div class="intro">
+    <h1>👉Welcome to my first website. 👨‍💻</h1>
+    <div class="ritik-name">RITIK - The beginner Web developer 💥🚀</div>
+    <p>
+      💌Every website is built with passion, <br>
+      Every line of code comes straight from the heart. <br>
+      Designed by Ritik, coded with love ❣️
+    </p>
+  </div>
+
+  <!-- Learning Section Start -->
+  <div class="learning-section">
+    <h2>📚 What Should You Learn to Become a Web Developer?</h2>
+    <ul>
+      <li>Strong understanding of HTML, CSS, and JavaScript</li>
+      <li>Responsive design using Media Queries, Flexbox, and CSS Grid</li>
+      <li>Version control system: Git & GitHub</li>
+      <li>Create beginner projects: Portfolio, Calculator, ToDo App</li>
+      <li>JavaScript DOM manipulation and ES6 features</li>
+      <li>Best learning resources: CodeWithHarry, W3Schools, FreeCodeCamp</li>
+    </ul>
+  </div>
+
+  <div class="learning-section">
+    <h2>🚀 Beginner Projects to Build</h2>
+    <ul>
+      <li>Personal Portfolio Website</li>
+      <li>Calculator (HTML/CSS/JS)</li>
+      <li>ToDo List App</li>
+      <li>Weather App (Using API)</li>
+      <li>Blog Website</li>
+      <li>Simple Login/Signup Page</li>
+    </ul>
+  </div>
+
+  <!-- 🌍 English Learning Section Start -->
+  <div class="learning-section">
+    <h2>🌍 Why English is Important for a Web Developer?</h2>
+    <ul>
+      <li>Most programming languages and documentation are in English</li>
+      <li>Online resources, tutorials, and forums like Stack Overflow are in English</li>
+      <li>Communication in tech companies is mostly in English</li>
+      <li>Freelancing and international job opportunities require English</li>
+    </ul>
+
+    <h2>📘 What to Learn in English?</h2>
+    <ul>
+      <li>Basic Grammar (Tenses, Modals, Conjunctions, Prepositions)</li>
+      <li>Daily-use Vocabulary & English Phrases</li>
+      <li>Web Development Technical English</li>
+      <li>Resume, Email & Interview Preparation</li>
+    </ul>
+
+    <h2>🔥 How to Improve Your English?</h2>
+    <ul>
+      <li>Practice daily speaking (mirror technique)</li>
+      <li>Translate thoughts from Hindi to English daily</li>
+      <li>Watch English videos with subtitles</li>
+      <li>Write daily small paragraphs or a diary</li>
+    </ul>
+
+    <div class="motivation">
+      📺 Recommended Channel name : mass study 
+    </div>
+  </div>
+  <!-- 🌍 English Learning Section End -->
+
+  <!-- 🎮 Game Section Start -->
+  <div class="learning-section">
+    <h2>🎮 Play a Quick Game - Guess the Number! between 1 to 20🌟</h2>
+    <p style="margin-bottom: 10px; color: #ffd700;">💌👉I'm thinking of a number between 1 and 20. Can you guess it? and i know you won't be able to beat me in a one time. you will have to try again more to gusse the right number. 🤭</p>
+    <input type="number" id="guessInput" min="1" max="20" placeholder="Enter your guess" style="padding: 10px; font-size: 16px; background: white; color: black; border: 2px solid #00ff99; border-radius: 5px; width: 180px;">
+    <button onclick="checkGuess()" style="margin-left: 10px; padding: 10px 15px; font-size: 16px; background: #00ff99; border: none; border-radius: 8px; color: black; cursor: pointer;">Guess</button>
+    <p id="gameMessage" style="margin-top: 15px; font-size: 1.2em; color: #add8e6;"></p>
+  </div>
+  <!-- 🎮 Game Section End -->
+
+  <!-- ❤️ Heart Animation Script -->
+  <script>
+    const heartArea = document.getElementById('heartArea');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      heart.style.opacity = Math.random();
+      heart.style.transform = `scale(${Math.random() + 0.5}) rotate(45deg)`;
+      heartArea.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+    setInterval(createHeart, 300);
+
+    let secretNumber = Math.floor(Math.random() * 20) + 1;
+    function checkGuess() {
+      const userGuess = Number(document.getElementById("guessInput").value);
+      const message = document.getElementById("gameMessage");
+
+      if (!userGuess || userGuess < 1 || userGuess > 20) {
+        message.innerText = "⛔ Please enter a number between 1 and 20!";
+        message.style.color = "#ff6347";
+        return;
+      }
+
+      if (userGuess === secretNumber) {
+        message.innerText = "🎉 Correct! You guessed it!";
+        message.style.color = "#00ff00";
+      } else if (userGuess > secretNumber) {
+        message.innerText = "📉 Too high! Try again.";
+        message.style.color = "#ffd700";
+      } else {
+        message.innerText = "📈 Too low! Try again.";
+        message.style.color = "#1e90ff";
+      }
+    }
+  </script>
+</body>
+</html>
